@@ -137,7 +137,7 @@ function Browse() {
   );
 }
 
-function Filter({ label, value, onChange, options, cls }: { label: string; value?: string; onChange: (v: string) => void; options: readonly string[]; cls: string }) {
+function Filter({ label, value, onChange, options, cls }: { label: string; value?: string | undefined; onChange: (v: string) => void; options: readonly string[]; cls: string }) {
   return (
     <select aria-label={label} className={cls} value={value ?? ""} onChange={(e) => onChange(e.target.value)}>
       <option value="">Any {label.toLowerCase()}</option>
