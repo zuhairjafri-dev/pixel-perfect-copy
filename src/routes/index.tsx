@@ -52,21 +52,22 @@ function Home() {
         <img src={hero} alt="" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover object-right" />
         <div className="bg-hero-fade absolute inset-0" />
         <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-24 md:pb-28 md:pt-36">
-          <p className="eyebrow fade-up">Pre-owned cars · India</p>
-          <h1 className="fade-up mt-4 max-w-2xl text-5xl leading-[1.05] md:text-7xl">
-            {brand.tagline.replace(/\.$/, "")}<span className="text-gold">.</span>
+          <p className="eyebrow fade-up">Independent pre-owned dealership · India</p>
+          <h1 className="fade-up mt-4 max-w-2xl text-5xl leading-[1.02] md:text-7xl">
+            Handpicked cars,<br />honestly presented<span className="text-gold">.</span>
           </h1>
           <p className="fade-up mt-5 max-w-lg text-ink-muted">
-            Browse quality used cars from individual owners and dealers. Talk to sellers directly — no middlemen, no surprises.
+            Every car you see is from our own {brand.name} inventory — with clear pricing and full details. Enquire on WhatsApp or visit us for a test drive.
           </p>
           <div className="fade-up mt-8 flex flex-wrap gap-3">
             <Link to="/cars" className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-ink transition hover:bg-gold-soft">
-              Buy cars <ArrowRight className="h-4 w-4" />
+              View inventory <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/sell" className="inline-flex items-center gap-2 rounded-full border border-ink-foreground/30 px-6 py-3 text-sm font-semibold transition hover:border-gold hover:text-gold">
-              Sell your car
+              Sell your car to us
             </Link>
           </div>
+
 
           <form onSubmit={submit} className="fade-up mt-14 grid max-w-3xl gap-3 rounded-xl border border-ink-line bg-ink/70 p-4 backdrop-blur md:grid-cols-[1fr_1fr_1fr_auto]" aria-label="Search cars">
             <select aria-label="Brand" className={field} value={q.brand} onChange={(e) => setQ({ ...q, brand: e.target.value })}>
@@ -119,29 +120,29 @@ function Home() {
       <section className="bg-ink text-ink-foreground">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:grid-cols-2">
           <div>
-            <p className="eyebrow">For buyers</p>
+            <p className="eyebrow">Buying from us</p>
             <h2 className="mt-3 text-4xl">How buying works</h2>
-            <Steps items={["Browse listings and shortlist cars you like.", "Contact the seller by enquiry, call or WhatsApp.", "Book a test drive and inspect the car in person.", "Agree the price and complete paperwork with the seller."]} />
+            <Steps items={["Browse our inventory and shortlist the cars you like.", "Enquire on WhatsApp or call — we'll answer your questions.", "Visit the showroom to inspect and test drive the car.", "Agree the price and we'll guide you through the paperwork."]} />
           </div>
           <div>
-            <p className="eyebrow">For sellers</p>
+            <p className="eyebrow">Selling to us</p>
             <h2 className="mt-3 text-4xl">How selling works</h2>
-            <Steps items={["Create a free account and add your car's details.", "Upload clear photos and submit for review.", "Once approved, your listing goes live.", "Receive enquiries directly from interested buyers."]} />
+            <Steps items={["Share your car's details through our form.", "We get back to you on WhatsApp to discuss it.", "Bring the car in so we can see it in person.", "If it suits our inventory, we make you an offer."]} />
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20">
         <p className="eyebrow">Why {brand.name}</p>
-        <h2 className="mt-3 max-w-xl text-4xl">Built on transparency</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-4">
+        <h2 className="mt-3 max-w-xl text-4xl">A dealership built on clarity</h2>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: BadgeCheck, t: "Reviewed listings", d: "Every listing is checked by our team before it is published." },
-            { icon: MessageCircle, t: "Direct contact", d: "Speak to sellers yourself on WhatsApp or phone." },
-            { icon: Wallet, t: "Free for sellers", d: "List your car at no cost during our launch period." },
-            { icon: ShieldCheck, t: "Privacy first", d: "Your phone number is never shown publicly without consent." },
+            { icon: BadgeCheck, t: "Our own inventory", d: "Every car listed is from our dealership — no third-party sellers." },
+            { icon: Wallet, t: "Upfront prices", d: "The price and key details are shown on every listing." },
+            { icon: MessageCircle, t: "Talk to a person", d: "Reach our team directly on WhatsApp or by phone." },
+            { icon: ShieldCheck, t: "Privacy first", d: "Your details are used only to respond to your enquiry." },
           ].map(({ icon: Icon, t, d }) => (
-            <div key={t} className="rounded-xl border bg-card p-6">
+            <div key={t} className="rounded-lg border bg-card p-6 transition hover:border-gold">
               <Icon className="h-6 w-6 text-gold" />
               <h3 className="mt-4 text-2xl">{t}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{d}</p>
@@ -149,17 +150,20 @@ function Home() {
           ))}
         </div>
         <p className="mt-8 rounded-lg border border-dashed bg-secondary p-4 text-sm text-muted-foreground">
-          <strong className="text-foreground">Safety tip:</strong> Always inspect the car and verify the RC, insurance and service history in person before paying. {brand.name} does not inspect vehicles or hold payments.
+          <strong className="text-foreground">Good practice:</strong> Always inspect the car and check the RC, insurance and service history before you pay.
         </p>
       </section>
 
       <section className="border-t bg-secondary">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-5 py-16 md:flex-row md:items-center">
           <div>
-            <h2 className="text-4xl">Have questions?</h2>
-            <p className="mt-2 text-muted-foreground">Testimonials will appear here once we have genuine customer reviews.</p>
+            <h2 className="text-4xl">Seen a car you like?</h2>
+            <p className="mt-2 text-muted-foreground">Message us on WhatsApp or read our answers to common questions.</p>
           </div>
-          <Link to="/faq" className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90">Read the FAQs</Link>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/contact" className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90">Contact us</Link>
+            <Link to="/faq" className="rounded-full border border-foreground/20 px-6 py-3 text-sm font-semibold hover:border-gold">Read the FAQs</Link>
+          </div>
         </div>
       </section>
     </>

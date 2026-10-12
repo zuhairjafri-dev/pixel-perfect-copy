@@ -99,11 +99,12 @@ function CarDetail() {
               <a href={testDrive} target="_blank" rel="noopener noreferrer" className="block text-center text-sm font-semibold underline-offset-4 hover:underline">Request a test drive</a>
             </div>
             <div className="mt-6 border-t pt-4 text-sm">
-              <p className="text-muted-foreground">Seller</p>
-              <p className="font-medium">{car.seller.name} <span className="text-muted-foreground">· {car.seller.type}</span></p>
+              <p className="text-muted-foreground">Sold by</p>
+              <p className="font-medium">{brand.name} · {brand.address}</p>
+              <p className="mt-1 text-xs text-muted-foreground">Stock ref: {car.id}</p>
             </div>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">This is a sample listing for demonstration. Online enquiries, favourites and bookings arrive with accounts.</p>
+          <p className="mt-4 text-xs text-muted-foreground">Sample listing shown while our real inventory is being uploaded. Details and price are illustrative.</p>
         </aside>
       </div>
 

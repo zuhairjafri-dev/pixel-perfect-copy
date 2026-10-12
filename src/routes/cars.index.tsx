@@ -70,7 +70,7 @@ function Browse() {
 
   return (
     <>
-      <PageHeader eyebrow="Buy cars" title="Find your next car" intro="Sample listings are shown while the marketplace is being set up." />
+      <PageHeader eyebrow="Inventory" title="Our inventory" intro="Our own handpicked inventory. Sample cars are shown while real stock is being uploaded." />
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-12 lg:grid-cols-[280px_1fr]">
         <aside className="space-y-4" aria-label="Filters">
           <input aria-label="Search model" placeholder="Search model" maxLength={60} className={sel} defaultValue={s.q}
@@ -137,7 +137,7 @@ function Browse() {
   );
 }
 
-function Filter({ label, value, onChange, options, cls }: { label: string; value?: string; onChange: (v: string) => void; options: readonly string[]; cls: string }) {
+function Filter({ label, value, onChange, options, cls }: { label: string; value?: string | undefined; onChange: (v: string) => void; options: readonly string[]; cls: string }) {
   return (
     <select aria-label={label} className={cls} value={value ?? ""} onChange={(e) => onChange(e.target.value)}>
       <option value="">Any {label.toLowerCase()}</option>
