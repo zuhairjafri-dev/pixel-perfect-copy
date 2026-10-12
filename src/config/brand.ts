@@ -17,7 +17,7 @@ export const brand = {
   },
   seo: {
     description:
-      "CarNexa is a premium Indian used-car marketplace. Browse verified-seller listings, contact sellers on WhatsApp and request test drives.",
+      "CarNexa is an independent premium pre-owned car dealership in India. Browse our own handpicked inventory, enquire on WhatsApp and book a showroom visit or test drive.",
   },
   currency: "INR",
   locale: "en-IN",
