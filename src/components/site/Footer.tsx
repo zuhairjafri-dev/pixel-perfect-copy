@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="text-ink-foreground"><Logo /></div>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed">{brand.tagline} A transparent marketplace connecting buyers and sellers of pre-owned cars across India.</p>
+          <p className="mt-4 max-w-sm text-sm leading-relaxed">{brand.tagline} An independent pre-owned car dealership. Every car listed is from our own inventory.</p>
         </div>
         <div>
           <h3 className="eyebrow mb-4 font-sans">Explore</h3>
