@@ -26,7 +26,7 @@ export function Header() {
           ))}
         </nav>
         <Link to="/sell" className="hidden rounded-full bg-gold px-5 py-2 text-sm font-semibold text-ink transition hover:bg-gold-soft md:inline-flex">
-          List your car
+          Sell to us
         </Link>
         <button className="md:hidden" onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open}>
           {open ? <X /> : <Menu />}

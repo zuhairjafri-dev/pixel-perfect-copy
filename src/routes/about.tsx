@@ -15,15 +15,15 @@ export const Route = createFileRoute("/about")({
     <>
       <PageHeader eyebrow="About us" title={`Why ${brand.name}`} intro={brand.tagline} />
       <Prose>
-        <p>{brand.name} is a marketplace for pre-owned cars in India, built for people who want a clear, honest way to buy or sell a car.</p>
+        <p>{brand.name} is an independent pre-owned car dealership in India. Every car on this website is from our own inventory — we don't list cars from other sellers.</p>
         <h2>What we believe</h2>
         <ul>
           <li>Prices and specifications should be shown upfront.</li>
-          <li>Buyers and sellers should be able to talk to each other directly.</li>
+          <li>You should be able to talk to a real person quickly.</li>
           <li>Personal information should be protected, not sold.</li>
         </ul>
-        <h2>What we don't do</h2>
-        <p>We don't inspect vehicles, offer warranties or hold payments. Always verify a car and its documents in person before you buy.</p>
+        <h2>Before you buy</h2>
+        <p>We encourage every buyer to see the car in person and check its RC, insurance and service history before paying.</p>
       </Prose>
     </>
   ),

@@ -16,11 +16,11 @@ export const Route = createFileRoute("/faq")({
 });
 
 const faqs = [
-  ["Is it free to list my car?", "Yes. Listing is free during our launch period."],
-  [`Does ${brand.name} inspect cars?`, "No. We review listing details for accuracy, but we do not physically inspect vehicles. Always inspect the car yourself or with a trusted mechanic."],
-  ["How do I contact a seller?", "Use the WhatsApp or call buttons on any car page. Website enquiries and test-drive requests will also be saved to your account once accounts launch."],
-  ["Do I need an account to browse?", "No. Anyone can browse listings. An account is only needed to list a car, save favourites or track enquiries."],
-  ["Do you handle payments?", "Not at the moment. Price and payment are agreed directly between buyer and seller. Never pay before seeing the car and its documents."],
+  [`Who sells the cars on ${brand.name}?`, `Every car is from our own ${brand.name} dealership inventory. We don't list cars from other sellers.`],
+  ["How do I enquire about a car?", "Use the WhatsApp or call buttons on any car page. Your message includes the car's stock reference so we can help quickly."],
+  ["Can I book a test drive?", "Yes. Use \"Request a test drive\" on the car page and we'll confirm a time with you on WhatsApp."],
+  ["Can I sell my car to you?", "Yes. Share your car's details on the Sell Your Car page and our team will get back to you."],
+  ["How is payment handled?", "Payment is arranged with our team at the showroom. Never pay anyone before seeing the car and its documents."],
   ["Which documents should I check?", "Registration Certificate (RC), valid insurance, PUC certificate, service history and, for loans, a bank NOC."],
 ] as const;
 

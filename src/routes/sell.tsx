@@ -53,19 +53,19 @@ function Sell() {
 
   return (
     <>
-      <PageHeader eyebrow="Sell your car" title="Reach serious buyers" intro="Listing is free. Tell us about your car and our team will help you get it listed." />
+      <PageHeader eyebrow="Sell your car" title="Sell your car to us" intro={`Tell us about your car and the ${brand.name} team will get back to you to discuss it.`} />
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-14 lg:grid-cols-[1fr_1.2fr]">
         <div className="space-y-6">
           {[
-            ["Free listing", "No listing fees during our launch period."],
-            ["Reviewed before publishing", "Our team checks every listing for accuracy."],
-            ["Direct enquiries", "Buyers contact you — you stay in control of the deal."],
-            ["Your privacy", "Your phone number is only shared with your consent."],
+            ["No obligation", "Sharing your details doesn't commit you to anything."],
+            ["Talk to our team", "We reply on WhatsApp to understand your car better."],
+            ["See it in person", "Any offer is made only after we've seen the car."],
+            ["Your privacy", "Your details are used only to respond to you."],
           ].map(([t, d]) => (
             <div key={t} className="border-l-2 border-gold pl-5"><h2 className="text-2xl">{t}</h2><p className="mt-1 text-sm text-muted-foreground">{d}</p></div>
           ))}
         </div>
-        <form onSubmit={submit} noValidate className="rounded-xl border bg-card p-6 shadow-card md:p-8">
+        <form onSubmit={submit} noValidate className="rounded-lg border bg-card p-6 shadow-card md:p-8">
           <h2 className="text-3xl">Your car details</h2>
           <p className="mt-1 text-sm text-muted-foreground">Submitting opens WhatsApp with your details prefilled — nothing is stored on this site yet.</p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
